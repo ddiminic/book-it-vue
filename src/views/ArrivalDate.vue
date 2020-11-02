@@ -52,7 +52,7 @@ export default {
           changedDate.setHours(0, 0, 0, 0);
           this.events.push({ date: new Date(changedDate), type: "is-danger" });
         });
-      });
+      }).catch(() => this.$router.push("login"));
     }
   },
   mounted() {
